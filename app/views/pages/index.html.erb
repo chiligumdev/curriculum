@@ -1,0 +1,5 @@
+<% if current_user %>
+	<%= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'btn btn-outline-danger my-2 my-sm-0' %>
+<% else %>
+	<%= link_to 'Login', new_user_session_path, class: 'btn btn-danger my-2 my-sm-0' %>
+<% end %>

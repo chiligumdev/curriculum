@@ -24,7 +24,7 @@ gem 'figaro'
 # Devise
 gem 'devise'
 gem 'omniauth'
-gem 'omniauth-linkedin-oauth2', git: 'https://github.com/Devato/omniauth-linkedin-oauth2.git'
+gem 'omniauth-linkedin-oauth2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
