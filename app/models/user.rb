@@ -14,6 +14,7 @@ class User < ApplicationRecord
       user.location = raw_info['location']['name']
       user.picture_url = raw_info['pictureUrl']
       user.profile_url = raw_info['publicProfileUrl']
+      user.headline = raw_info['headline']
       user.password = Devise.friendly_token[0, 20]
     end
   end
