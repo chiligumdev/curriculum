@@ -7,6 +7,8 @@ class RegistrationsController < Devise::RegistrationsController
 
   def update
   	current_user.update(user_params)
+    current_user.fill_form = true
+    current_user.save    
   end
 
   private
