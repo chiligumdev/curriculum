@@ -1,14 +1,11 @@
-<img src="bg.png" class="bg" alt="">
-
 <div class="container">
-
   <div class="col-sm-3">
-    <img src='https://projetodraft.com/draft/wp-content/uploads/2015/10/logotipo_chiligum_vermelho-980x545.png' class='img-fluid logo'>
+    <img src='/logo.png' class='img-fluid logo'>
   </div>
 </div>
 
 <div id="content">
-  <div class="container push-top">
+  <div class="container push-top-home">
     <div class="row">
       <div class="col-sm-6">
         <p class="title" id="target">
@@ -23,7 +20,7 @@
         <% if current_user %>
         <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'btn btn-outline-danger' %>
         <% else %>
-        <%= link_to "Gerar vídeo com meu Linkedin", new_user_session_path, class: 'btn btn-primary btn-lg' %>
+        <%= link_to "Gerar vídeo com meu Linkedin", user_linkedin_omniauth_authorize_path, class: 'btn btn-primary btn-lg' %>
         <% end %>
 
       </div>
@@ -34,8 +31,6 @@
           Your browser does not support the video tag.
         </video>
       </div>
-
-
 
     </div>
 

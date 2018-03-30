@@ -14,7 +14,11 @@
  *= require_self
  */
 
-.push-top{
+.container{
+  margin-bottom: 100px;
+}
+
+.push-top-home{
   margin-top: 7%;
 }
 
@@ -88,12 +92,13 @@ img.bg {
   border-color: #3185FC;
 }
 
+.form-fill{
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-
-
-
-
-
-
+.no-video{
+  margin-top: 20%;
+}
 
 

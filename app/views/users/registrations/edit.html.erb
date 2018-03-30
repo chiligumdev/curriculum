@@ -1,7 +1,11 @@
 <div class="container">
+  <div class="col-sm-3">
+    <img src='/logo.png' class='img-fluid logo'>
+  </div>
+
   <div class="row">
     <div class="col-sm-6">
-      <h1>Finalize seu cadastro</h1>
+      <h2 class='form-fill'>Finalize as informações</h2>
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= devise_error_messages! %>
 
@@ -62,13 +66,18 @@
       </div>
 
       <div class="actions">
-        <%= f.submit "Gerar meu vídeo personalizado" %>
+        <%= f.submit "Gerar meu vídeo personalizado", class: 'btn btn-primary' %>
       </div>
       <% end %> 
     </div>
 
     <div class="col-sm-6">
-      <h1>Compartilhe seu vídeo</h1>
+      <h2 class='form-fill'>Compartilhe seu vídeo</h2>
+      <div class="text-center no-video">
+        <img src='/sad.png' class='img-fluid'><br/>
+        <p class='text-secondary'>Você ainda não concluiu o formulário.</p>
+      </div>
+
     </div>
   </div>
 </div>
