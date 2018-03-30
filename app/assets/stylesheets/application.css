@@ -14,6 +14,86 @@
  *= require_self
  */
 
-.container{
-	margin-top: 70px;
+.push-top{
+  margin-top: 7%;
 }
+
+body {
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.logo{
+  margin-left: -50px;
+}
+
+img.bg {
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+#content {
+  position: relative;
+  width: 100%;
+  background: transparent;
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 2rem;
+  font-weight: 800;
+  font-size: 3.2rem;
+  line-height: 1.45;
+}
+.title .highlight {
+  display: inline;
+  background: #E63946;
+  color: white;
+  padding: 0.5rem;
+  -webkit-box-decoration-break: clone;
+  -ms-box-decoration-break: clone;
+  -o-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.title.step-1 .highlight {
+  box-shadow: 0.5rem 0 0 #ee4035, -0.5rem 0 0 #ee4035;
+}
+.title.step-2 .highlight {
+  box-shadow: 0.5rem 0 0 blue, -0.5rem 0 0 blue;
+}
+
+.intro{
+  font-family: 'Hind', sans-serif;
+  font-weight: 600;
+  color: #000;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+  background-color: #3185FC;
+  border-color: #3185FC;
+}
+
+
+
+
+
+
+
+
+
+
