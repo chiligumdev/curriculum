@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="text-center">
+    <div class="row">
+      <div class="col-sm-10 offset-sm-1">
+        <% if @video.url.nil? %>
+        <div class="no-video">
+          <img src='https://emojipedia-us.s3.amazonaws.com/thumbs/320/apple/129/nerd-face_1f913.png' class='img-fluid' />
+          <p class='text-muted'><b>Eba!</b> Espere alguns segundos! nossos nerds estão gerando o seu vídeo.</p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" class="img-fluid" width="100" />
+        </div>
+        <% else %>
+          <iframe width="90%" height="430" src="https://www.youtube.com/embed/aUaFPavTvZk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id='slug' class='<%= @video.slug %>'></div>
+<%= javascript_include_tag 'videos', defer: true %>
+
+
