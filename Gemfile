@@ -25,6 +25,12 @@ gem 'figaro'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-linkedin-oauth2'
+# Redis to use websocket gems
+gem 'redis', '~> 3.0'
+# Lets make fun with http
+gem 'httparty'
+gem 'httmultiparty'
+gem 'down'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

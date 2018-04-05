@@ -9,14 +9,14 @@
           <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" class="img-fluid" width="100" />
         </div>
         <% else %>
-          <iframe width="90%" height="430" src="https://www.youtube.com/embed/aUaFPavTvZk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <video width="320" height="240" controls>
+            <source src="<%= @video.url %>" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
         <% end %>
       </div>
     </div>
   </div>
 </div>
-
-<div id='slug' class='<%= @video.slug %>'></div>
+<div id='slug' class='<%= @video.user_id %>'></div>
 <%= javascript_include_tag 'videos', defer: true %>
-
-
