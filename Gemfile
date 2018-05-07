@@ -23,14 +23,19 @@ gem 'jbuilder', '~> 2.5'
 gem 'figaro'
 # Devise
 gem 'devise'
-gem 'omniauth'
-gem 'omniauth-linkedin-oauth2'
+gem 'omniauth', '1.4.0'
+#gem 'omniauth-linkedin-oauth2'
+
+gem 'omniauth-linkedin-oauth2', git: 'https://github.com/Devato/omniauth-linkedin-oauth2.git'
+
+
 # Redis to use websocket gems
 gem 'redis', '~> 3.0'
 # Lets make fun with http
 gem 'httparty'
 gem 'httmultiparty'
 gem 'down'
+gem 'linkedin'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
