@@ -1,3 +1,5 @@
+<%= javascript_include_tag 'masker' %>
+
 <div class="container">
   <div class="row">
     <div class="col-sm-6">
@@ -57,6 +59,21 @@
           <div class="form-group">
             <%= f.label :course, "Curso" %>
             <%= f.text_field :course, required: true, class: 'form-control' %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <%= f.label :phone, "Celular para contato" %>
+            <%= f.text_field :phone, class: 'form-control' %>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <%= f.label :age, "Idade" %>
+            <%= f.select :age, options_for_select(18..72), { class: 'form-control', prompt: "Selecione", include_blank: true } %>
           </div>
         </div>
       </div>

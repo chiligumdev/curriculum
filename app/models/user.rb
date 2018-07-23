@@ -7,9 +7,6 @@ class User < ApplicationRecord
   has_one :video
 
   def self.from_omniauth(auth)
-    puts "============="
-    puts auth
-    puts "============="
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider_token = auth.credentials.token
       raw_info = auth.extra.raw_info

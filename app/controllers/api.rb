@@ -1,3 +1,6 @@
+require 'down'
+require 'rest-client'
+
 # Main api consume
 class API
   include HTTParty
@@ -27,23 +30,28 @@ class API
     JSON.parse response.body
   end
 
-  def assets(name, file)
-    response =
-      HTTMultiParty.post("https://api.chiligumvideos.com/api/assets", :query => {
-      asset: { 
-        name: name,
-        attachment: File.new(file)
-      }}, headers: @headers)
+  def assets(file)
+    tempfile = Down.download(file[:file])
+
+    params = {
+      asset: {
+        name: 'foto_perfil',
+        attachment: File.new(tempfile)
+      }
+    }
+
+    response = RestClient.post('https://api.chiligumvideos.com/api/assets', params, @headers)
+
     JSON.parse response.body
   end
   
-  def videos(name, data, track, template)
+  def videos(data)
     response = HTTMultiParty.post("https://api.chiligumvideos.com/api/videos", :query => {
       video: { 
-        name: name,
+        name: 'Video CV',
         resolution: 1080,
-        track_id: track,
-        template_id: template,
+        track_id: 95,
+        template_id: 168,
         data: data,
         postback_url: 'http://466d7517.ngrok.io/postback'
       }}, headers: @headers, timeout: 120)
